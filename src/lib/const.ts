@@ -1,13 +1,13 @@
 import { env } from 'bun'
 
-import helloWorldRouter from '@/routes/helloworld'
+import pingRoute from '@/routes/ping'
 
 export const PORT = env.PORT || (3000 as const)
 
 export const ENDPOINTS = {
-  HELLO_WORLD: {
-    path: '/hello-world',
+  PING: {
+    path: '/ping',
     auth: null,
-    router: helloWorldRouter
+    router: pingRoute
   }
 } as const

@@ -5,7 +5,7 @@ const router = Router()
 
 function GET(request: Request, response: Response, next: NextFunction) {
   try {
-    return generateResponse({ response, status: 200, data: 'Hello World!' })
+    return generateResponse({ response, status: 200, data: 'Pong!' })
   } catch (error) {
     next(error)
   }
