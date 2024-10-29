@@ -1,3 +1,4 @@
+import { generateResponse } from '@/lib/utils'
 import { env } from 'bun'
 import { type NextFunction, type Request, type Response } from 'express'
 
@@ -9,8 +10,7 @@ export default function auth(request: Request, response: Response, next: NextFun
   const key = headersKey ?? queryKey ?? bodyKey
 
   if (!key || env.API_KEY !== key) {
-    response.status(401).json({ message: 'Unauthorized' })
-    return
+    return generateResponse({ response, status: 401, message: 'Unauthorized' })
   }
 
   next()
