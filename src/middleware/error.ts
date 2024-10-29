@@ -8,7 +8,7 @@ export default function errorMiddleware(
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   next: NextFunction
 ) {
-  log.error('Unhandled error')
+  log.error('Unhandled error.\n', Object(error))
 
   return generateResponse({ response, status: 500, message: 'An internal error occurred.' })
 }
