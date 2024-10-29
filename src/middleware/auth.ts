@@ -1,6 +1,7 @@
-import { generateResponse } from '@/lib/utils'
 import { env } from 'bun'
 import { type NextFunction, type Request, type Response } from 'express'
+
+import { generateResponse } from '@/lib/utils'
 
 export default function auth(request: Request, response: Response, next: NextFunction) {
   const headersKey = request.headers.authorization

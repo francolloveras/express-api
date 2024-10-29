@@ -1,5 +1,6 @@
+import { type NextFunction, type Request, type Response, Router } from 'express'
+
 import { generateResponse } from '@/lib/utils'
-import { Router, type NextFunction, type Request, type Response } from 'express'
 
 const router = Router()
 

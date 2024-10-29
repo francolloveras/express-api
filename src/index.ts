@@ -1,8 +1,11 @@
 import express from 'express'
-import { PORT, ROOT_PATH, ENDPOINTS } from '@/lib/const'
-import logMiddleware from '@/middleware/log'
+
+import { ENDPOINTS, PORT, ROOT_PATH } from '@/lib/const'
+
 import errorMiddleware from '@/middleware/error'
+import logMiddleware from '@/middleware/log'
 import notFoundMiddleware from '@/middleware/not-found'
+
 import { log } from '@/lib/utils'
 
 const app = express()

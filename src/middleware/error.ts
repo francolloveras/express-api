@@ -1,5 +1,6 @@
-import { generateResponse, log } from '@/lib/utils'
 import { type NextFunction, type Request, type Response } from 'express'
+
+import { generateResponse, log } from '@/lib/utils'
 
 export default function errorMiddleware(
   error: unknown,
