@@ -20,3 +20,13 @@ export const ENDPOINTS = {
     router: pingV2Route
   }
 } as const
+
+export const STATUS_MESSAGES = {
+  200: 'The request has processed successfully.',
+  201: 'The request has processed successfully and a new resource has created.',
+  400: 'The request has malformed.',
+  401: 'The request has unauthorized.',
+  403: 'The request has forbidden.',
+  404: 'The requested resource has not found.',
+  500: 'An error occurred while processing the request.'
+} as const

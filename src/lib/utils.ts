@@ -1,5 +1,7 @@
 import { type Response } from 'express'
 
+import { STATUS_MESSAGES } from '@/lib/const'
+
 export const generateResponse = ({
   response,
   status,
@@ -13,7 +15,7 @@ export const generateResponse = ({
 }) => {
   response.status(status).json({
     status,
-    message,
+    message: message ?? STATUS_MESSAGES[status as keyof typeof STATUS_MESSAGES],
     data
   })
 }
